@@ -1,0 +1,33 @@
+def nextw(i,b):
+    if b<0 or n-i<=b:
+        return 0
+    if i==n:
+        if(b==0):
+            return 1
+        else:
+            return 0
+    if M[i,b]!=0:
+        tmp= M[i,b]-1
+        return tmp
+    
+    if s[i]=='?':
+        k = nextw(i+1,p-1) + nextw(i+1,p+1)
+    else:
+        if s[i]==')':
+            b = b-1
+        if s[i]=='()':
+            b = b + 1
+        k =nextw(i+1,p)
+    M[i,p]= k +1
+    return k
+        
+
+
+s = "(((????)))"
+n=len(s)
+print(n)
+M = [0] * n
+for i in range(n):
+    M[i] = [0] * n
+print(M)
+count = nextw(0,0)
