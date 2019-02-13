@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/artemaroslankin/Documents/Progacpp/automata/automata.h
+iostream
+-
+string.h
+-
+chrono
+-
+thread
+-
+
+/Users/artemaroslankin/Documents/Progacpp/automata/main.cpp
+iostream
+-
+automata.h
+/Users/artemaroslankin/Documents/Progacpp/automata/automata.h
+
